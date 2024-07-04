@@ -6,17 +6,17 @@ namespace Ex04.Menus.Interfaces
     public class MenuItem : IMenuItem
     {
         public string Title { get; }
-        private readonly Action _action;
+        private readonly IOperation _operation;
 
-        public MenuItem(string title, Action action)
+        public MenuItem(string title, IOperation operation)
         {
             Title = title;
-            _action = action;
+            _operation = operation;
         }
 
         public void Execute()
         {
-            _action.Invoke();
+            _operation.NotifyToOperate();
         }
     }      
 }

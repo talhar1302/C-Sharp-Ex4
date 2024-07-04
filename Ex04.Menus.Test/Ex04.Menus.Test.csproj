@@ -37,6 +37,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MenuManager.cs" />
+    <Compile Include="OperationsForInterface\CountCapitals.cs" />
+    <Compile Include="OperationsForInterface\ShowDate.cs" />
+    <Compile Include="OperationsForInterface\ShowTime.cs" />
+    <Compile Include="OperationsForInterface\ShowVersion.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
