@@ -6,19 +6,21 @@ namespace Ex04.Menus.Events
 {
     public class Menu
     {
-        public string Title { get; }
-        private readonly List<MenuItem> _items = new List<MenuItem>();
-        private readonly bool _isMainMenu;
+        private readonly string r_Title;
+        private readonly List<MenuItem> r_items = new List<MenuItem>();
+        private readonly bool r_isMainMenu;
 
-        public Menu(string title, bool isMainMenu = false)
+        public string Title { get=> r_Title; }
+
+        public Menu(string i_title, bool i_isMainMenu = false)
         {
-            Title = title;
-            _isMainMenu = isMainMenu;
+            r_Title = i_title;
+            r_isMainMenu = i_isMainMenu;
         }
 
-        public void AddItem(MenuItem item)
+        public void AddItem(MenuItem i_item)
         {
-            _items.Add(item);
+            r_items.Add(i_item);
         }
 
         public void Show()
@@ -33,7 +35,7 @@ namespace Ex04.Menus.Events
                     break;
                 }
 
-                _items[choice - 1].Execute();
+                r_items[choice - 1].Execute();
             }
         }
 
@@ -48,13 +50,13 @@ namespace Ex04.Menus.Events
             StringBuilder menuBuilder = new StringBuilder();
             menuBuilder.AppendLine($"--{Title}--");
 
-            for (int i = 0; i < _items.Count; i++)
+            for (int i = 0; i < r_items.Count; i++)
             {
-                menuBuilder.AppendLine($"{i + 1}. {_items[i].Title}");
+                menuBuilder.AppendLine($"{i + 1}. {r_items[i].Title}");
             }
 
-            menuBuilder.AppendLine(_isMainMenu ? "0. Exit" : "0. Back");
-            menuBuilder.Append($"Enter your request (1-{_items.Count} or press '0' to {(_isMainMenu ? "Exit" : "Back")}): ");
+            menuBuilder.AppendLine(r_isMainMenu ? "0. Exit" : "0. Back");
+            menuBuilder.Append($"Enter your request (1-{r_items.Count} or press '0' to {(r_isMainMenu ? "Exit" : "Back")}): ");
 
             return menuBuilder.ToString();
         }
@@ -68,7 +70,7 @@ namespace Ex04.Menus.Events
 
                 if (isNumber)
                 {
-                    if (choice >= 0 && choice <= _items.Count)
+                    if (choice >= 0 && choice <= r_items.Count)
                     {
                         return choice;
                     }
