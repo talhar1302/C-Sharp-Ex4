@@ -43,7 +43,7 @@ namespace Ex04.Menus.Test
             mainMenu.Show();
         }
 
-        private static void ContinueWithAnyKey()
+        private static void continueWithAnyKey()
         {
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey(true);
@@ -51,7 +51,7 @@ namespace Ex04.Menus.Test
         public static void ShowVersion()
         {
             Console.WriteLine("App Version: 24.2.4.9504");
-            ContinueWithAnyKey();
+            continueWithAnyKey();
         }
 
         public static void CountCapitals()
@@ -64,19 +64,19 @@ namespace Ex04.Menus.Test
                 if (char.IsUpper(c)) count++;
             }
             Console.WriteLine($"There are {count} capital letters in your sentence.");
-            ContinueWithAnyKey();
+            continueWithAnyKey();
         }
 
         public static void ShowTime()
         {
             Console.WriteLine($"The current time is: {DateTime.Now.ToShortTimeString()}");
-            ContinueWithAnyKey();
+            continueWithAnyKey();
         }
 
         public static void ShowDate()
         {
             Console.WriteLine($"Today's date is: {DateTime.Today.ToShortDateString()}");
-            ContinueWithAnyKey();
+            continueWithAnyKey();
         }
     }
 }

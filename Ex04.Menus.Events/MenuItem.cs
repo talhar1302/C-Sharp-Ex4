@@ -6,19 +6,19 @@ namespace Ex04.Menus.Events
     {
         
         private readonly string r_Title;
-        private readonly Action r_action;
+        private readonly Action r_Action;
 
         public string Title { get=> r_Title; }
 
-        public MenuItem(string i_title, Action i_action)
+        public MenuItem(string i_Title, Action i_Action)
         {
-            r_Title = i_title;
-            r_action = i_action;
+            r_Title = i_Title;
+            r_Action = i_Action;
         }
 
         public void Execute()
         {
-            r_action?.Invoke();
+            r_Action?.Invoke();
         }
     }
 }

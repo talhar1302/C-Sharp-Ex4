@@ -3,6 +3,6 @@
     public interface IMenu : IMenuItem
     {
         void Show();
-        void AddItem(IMenuItem i_item);
+        void AddItem(IMenuItem i_Item);
     }
 }
