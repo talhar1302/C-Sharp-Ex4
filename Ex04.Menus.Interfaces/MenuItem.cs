@@ -7,8 +7,7 @@ namespace Ex04.Menus.Interfaces
     {
         private readonly string r_Title;
         private readonly IOperation r_Operation;
-
-        public string Title { get=> r_Title; }
+        public string Title { get => r_Title; }
 
         public MenuItem(string i_Title, IOperation i_Operation)
         {

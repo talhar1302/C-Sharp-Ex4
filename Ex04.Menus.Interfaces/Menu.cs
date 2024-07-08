@@ -10,7 +10,7 @@ namespace Ex04.Menus.Interfaces
         private readonly List<IMenuItem> r_Items = new List<IMenuItem>();
         private readonly bool r_IsMainMenu;
 
-        public string Title { get=> r_Title; }
+        public string Title { get => r_Title; }
 
         public Menu(string i_Title, bool i_IsMainMenu = false)
         {
@@ -48,8 +48,8 @@ namespace Ex04.Menus.Interfaces
         private string buildMenuString()
         {
             StringBuilder menuBuilder = new StringBuilder();
-            menuBuilder.AppendLine($"--{Title}--");
 
+            menuBuilder.AppendLine($"--{Title}--");
             for (int i = 0; i < r_Items.Count; i++)
             {
                 menuBuilder.AppendLine($"{i + 1}. {r_Items[i].Title}");
@@ -80,16 +80,8 @@ namespace Ex04.Menus.Interfaces
                 {
                     Console.WriteLine("Invalid input. Please enter a number.");
                 }
-
-                continueWithAnyKey();
             }
-        }
-
-        private void continueWithAnyKey()
-        {
-            Console.WriteLine("Press any key to continue...");
-            Console.ReadKey(true); 
-        }
+        }    
 
         public void Execute()
         {

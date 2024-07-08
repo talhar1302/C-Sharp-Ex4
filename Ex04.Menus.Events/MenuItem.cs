@@ -8,7 +8,7 @@ namespace Ex04.Menus.Events
         private readonly string r_Title;
         private readonly Action r_Action;
 
-        public string Title { get=> r_Title; }
+        public string Title { get => r_Title; }
 
         public MenuItem(string i_Title, Action i_Action)
         {

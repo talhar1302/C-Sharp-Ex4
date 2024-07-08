@@ -9,8 +9,7 @@ namespace Ex04.Menus.Events
         private readonly string r_Title;
         private readonly List<MenuItem> r_Items = new List<MenuItem>();
         private readonly bool r_IsMainMenu;
-
-        public string Title { get=> r_Title; }
+        public string Title { get => r_Title; }
 
         public Menu(string i_Title, bool i_IsMainMenu = false)
         {
@@ -80,15 +79,7 @@ namespace Ex04.Menus.Events
                 {
                     Console.WriteLine("Invalid input. Please enter a number.");
                 }
-
-                continueWithAnyKey();
             }
-        }
-
-        private void continueWithAnyKey()
-        {
-            Console.WriteLine("Press any key to continue...");
-            Console.ReadKey(true); 
-        }
+        }       
     }
 }
